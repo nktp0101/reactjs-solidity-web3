@@ -28,11 +28,40 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ip {
+  background-color: #eeeeee;
+  border: none;
+  color: #282c34;
+  padding: 12px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+.btn {
+  background-color: #f2f2f2;
+  border: none;
+  color: #282c34;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 24px;
+  margin-right: 20px;
+  margin-bottom: 16px;
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.text {
+  font-size: 16px;
+}
+
+.box {
+  text-align: start;
 }
