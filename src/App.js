@@ -14,23 +14,21 @@ function App() {
   const [fullName, setFullName] = useState("FullName here");
 
   const getFullNameTest = async () => {
-    const res = await contract.getFullName();
-    console.log(res, "_res");
-    setFullName(res);
-
-    // if (res) {
-    //   toast.success("Get FullName Success!");
-    // } else {
-    //   toast.error("Something error here");
-    // }
+    try {
+      const res = await contract.getFullName();
+      setFullName(res);
+      toast.success("Get FullName Success!");
+    } catch (error) {
+      toast.error(error);
+    }
   };
 
   const setFullNameTest = async (name) => {
-    const res = await contract.setFullName(name);
-    if (res) {
+    try {
+      await contract.setFullName(name);
       toast.success("Changed FullName Success!");
-    } else {
-      toast.error("Something error here");
+    } catch (error) {
+      toast.error(error);
     }
   };
 
